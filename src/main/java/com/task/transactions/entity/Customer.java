@@ -10,11 +10,13 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name= "customer")
-public class Customers {
+public class Customer {
+
     @Id
     @Column(name="customer_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
+
     @Column(name="name")
     private String name;
 

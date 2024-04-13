@@ -6,10 +6,14 @@ import java.util.List;
 
 
 @Service
-public interface CumtomerService {
+public interface CustomerService {
     CustomerDto createCustomer(CustomerDto customerDto);
 
     CustomerDto getCustomerById(Long customerId);
 
     List<CustomerDto> getAllCustomers();
+
+    CustomerDto updateCustomer(Long customerId, CustomerDto updateCustomer);
+
+    void deleteCustomer(Long customerId);
 }

@@ -1,16 +1,37 @@
-spring.application.name=task
-server.port=8082
+spring:
+  security:
+    user:
+    name: test
+    password: test
+    Roles: ADMIN
+  application:
+    name: task
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5433/taskdb
+    username: task
+    password: p@ssw0rd
+mail:
+  host: smtp.example.com
+  port: 587
+  username: test@gmail.com
+  password: testpassword
+  properties:
+    mail:
+      smtp:
+        auth: true
+        starttls:
+          enable: true
+  receiver: recipient-email@example.com
 
-spring.datasource.driver-class-name=org.postgresql.Driver
-spring.datasource.url = jdbc:postgresql://localhost:5433/taskdb
-spring.datasource.username=task
-spring.datasource.password=p@ssw0rd
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+      dialect: org.hibernate.dialect.PostgreSQLDialect
 
-
-##configration JPA
-spring.jpa.hibernate.ddl-auto=create
-spring.jpa.show-sql= true
-spring.jpa.properties.hibernate.format_sql=ture
-spring.jpa.properties.hibernate,dialect = org.hibernate.dialect.postgreSQLDialect
-
-
+server:
+  port: 8082

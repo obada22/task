@@ -1,4 +1,5 @@
-package com.task.transactions.controller;
+/*package com.task.transactions.service;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -10,6 +11,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Override
+    @Bean
     public void configure(HttpSecurity http) throws Exception {
 
         http.csrf().disable().authorizeRequests()
@@ -21,4 +23,4 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .anyRequest().authenticated();
     }
 
-}
+}*/

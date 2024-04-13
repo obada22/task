@@ -1,6 +1,11 @@
 package com.task.transactions.entity;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import lombok.*;
+import java.time.LocalDate;
+
+
+import java.time.LocalDate;
 import java.util.Date;
 
 
@@ -18,20 +23,22 @@ public class Purchase {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne
+ //   @ManyToOne
   //  @JoinColumn(name="customer_id", referencedColumnName="customer_id")
-    @Column(name="customer_id")
-    private Long customer_id;
+    @Column(name="customer")
+    private String customer;
 
-    @ManyToOne
+ //   @ManyToOne
   //  @JoinColumn(name="product_id", referencedColumnName="product_id")
-    @Column(name="product_id")
-    private Long product_id;
+    @Column(name="product")
+    private String product;
 
     @Column(name="amount")
     private Long amount;
-
+/*
+    @JsonFormat(pattern = "dd/MM/yyyy")
+    @Temporal(TemporalType.DATE)
     @Column(name="date")
-    private Date date;
+    private LocalDate date;*/
 
 }

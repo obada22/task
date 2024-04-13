@@ -1,13 +1,13 @@
-package com.task.transactions.repo;
+package com.task.transactions.repository;
 
-import com.task.transactions.model.Customers;
+import com.task.transactions.entity.Customer;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 
 
 @RepositoryRestResource
-public interface CustomerRepo extends JpaRepository<Customers, Long> {
+public interface CustomerRepo extends JpaRepository<Customer, Long> {
 
 
 }
